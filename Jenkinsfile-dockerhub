@@ -6,12 +6,12 @@ pipeline {
      }
     environment {
     DOCKERHUB_CREDENTIALS = credentials('silas-dockerhub')
-    APP_NAME = "silas-app"
+    APP_NAME = "silaswantoh1/amazon"
     }
     stages { 
         stage('SCM Checkout') {
             steps{
-           git branch: 'main', https://github.com/Silaswantoh1/Amazon-clone-Dockerized.git'
+           git branch: 'main', url: 'https://github.com/Silaswantoh1/Amazon-clone-Dockerized.git'
             }
         }
         // run sonarqube test
