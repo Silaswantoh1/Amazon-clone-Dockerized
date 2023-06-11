@@ -6,7 +6,7 @@ pipeline {
      }
     environment {
     DOCKERHUB_CREDENTIALS = credentials('silas-dockerhub')
-    APP_NAME = "silaswantoh1/amazon"
+    APP_NAME = "dom-app"
     }
     stages { 
         stage('SCM Checkout') {
