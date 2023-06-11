@@ -6,7 +6,7 @@ pipeline {
      }
     environment {
     DOCKERHUB_CREDENTIALS = credentials('silas-dockerhub')
-    APP_NAME = "dom-app"
+    APP_NAME = "swantoh1/dom-app"
     }
     stages { 
         stage('SCM Checkout') {
@@ -37,7 +37,7 @@ pipeline {
         }
         stage('Trivy Scan (Aqua)') {
             steps {
-                sh 'trivy image dom-app:$BUILD_NUMBER'
+                sh 'trivy image swantoh1/dom-app:$BUILD_NUMBER'
             }
        }
         stage('push image') {
